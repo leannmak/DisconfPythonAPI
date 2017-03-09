@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/leannmak/DisconfPythonAPI.svg?branch=master)](https://travis-ci.org/leannmak/DisconfPythonAPI)
 [![Download Status](https://img.shields.io/badge/download-1024%2Fmonth-green.svg)](https://github.com/leannmak/DisconfPythonAPI)
 
-A simple way to connect to Disconf-Web api. (c) 2017.
+A simple way to connect to Disconf-Web api, (c) 2017.
 
 ## Prerequests
 
@@ -14,17 +14,18 @@ A simple way to connect to Disconf-Web api. (c) 2017.
 ## Usage
 
 ```
-$ https://github.com/leannmak/DisconfPythonAPI.git
+$ git clone https://github.com/leannmak/DisconfPythonAPI.git
 $ cd DisconfPythonAPI
 $ pip install -r requirements.txt
 $ flake8
-$ tox
 $ nosetests -v --with-coverage --cover-package=dapi --exe
+$ tox
 ```
 
 ## Examples
 
 ```
+# please set your own disconf service parameters in 'constants.py' first of all
 from dapi import DisconfAPI
 
 dapi = DisconfAPI()
