@@ -17,6 +17,9 @@ A simple way to connect to Disconf-Web api. (c) 2017.
 $ https://github.com/leannmak/DisconfPythonAPI.git
 $ cd DisconfPythonAPI
 $ pip install -r requirements.txt
+$ flake8
+$ tox
+$ nosetests -v --with-coverage --cover-package=dapi --exe
 ```
 
 ## Examples
@@ -31,13 +34,10 @@ app = dapi.app_list.get()['page']['result'][0]
 # GET /api/env/list
 env = dapi.env_list.get()['page']['result'][0]
 # GET /api/web/config/versionlist
-version = dapi.web_config_versionlist.get(
-    **{'appId': app['id']})['page']['result'][0]
+version = dapi.web_config_versionlist.get(appId=app['id'])['page']['result'][0]
 # POST /api/web/config/file
 with open('test', 'rb') as myfile:
-    print dapi.web_config_file.post(
-        **{'appId': app['id'], 'envId': env['id'],
-           'version': version, 'myfilerar': myfile})
+    print dapi.web_config_file.post(appId=app['id'], envId=env['id'], version=version, myfilerar=myfile)
 ```
 
 ## Disconf-Web API List
