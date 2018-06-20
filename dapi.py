@@ -136,7 +136,11 @@ class DisconfAPI(object):
         request.get_method = lambda: method
         opener = self.__urllib.urlopen(
             url=request, timeout=C.DEFAULT_DISCONF_TIMEOUT)
-        content = json.loads(opener.read())
+        content = opener.read()
+        try:
+            content = json.loads(content)
+        except ValueError:
+            pass
         return content
 
 
