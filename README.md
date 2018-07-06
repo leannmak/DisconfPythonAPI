@@ -1,6 +1,6 @@
 # Disconf Python API
 [![Build Status](https://travis-ci.org/leannmak/DisconfPythonAPI.svg?branch=master)](https://travis-ci.org/leannmak/DisconfPythonAPI)
-[![Download Status](https://img.shields.io/badge/download-1024%2Fmonth-green.svg)](https://github.com/leannmak/DisconfPythonAPI)
+[![Coverage Status](https://coveralls.io/repos/github/leannmak/DisconfPythonAPI/badge.svg?branch=master)](https://coveralls.io/github/leannmak/DisconfPythonAPI?branch=master)  
 
 A simple way to connect to Disconf-Web api, (c) 2017.
 
